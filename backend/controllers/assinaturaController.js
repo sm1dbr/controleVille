@@ -25,7 +25,7 @@ exports.criarAssinatura = async (req, res) => {
 
 // --- Função GET | lista todas as assinaturas ---
 
-exports.listarAssinaturas = async (_req, res) => {
+exports.listarAssinaturas = async (req, res) => {
     try {
         const lista = await Assinatura.find().sort({ dataRecebimento: -1 });
         return res.json(lista);
