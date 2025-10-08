@@ -3,6 +3,11 @@ const assinaturaRoutes = require('./routes/assinaturaRoutes');
 const comunicadoRoutes = require('./routes/comunicadoRoutes');
 const contatoRoutes = require('./routes/contatoRoutes');
 const apartamentoRoutes = require('./routes/apartamentoRoutes');
+const corretorRoutes = require('./routes/corretorRoutes');
+const historicoRoutes = require('./routes/historicoRoutes');
+const prestadorRoutes = require('./routes/prestadorRoutes');
+const usuarioRoutes = require('./routes/usuarioRoutes');
+const epiRoutes = require('./routes/epiRoutes');
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
@@ -17,6 +22,10 @@ app.use('/api', assinaturaRoutes);
 app.use('/api', comunicadoRoutes);
 app.use('/api', contatoRoutes);
 app.use('/api', apartamentoRoutes);
+app.use('/api', corretorRoutes);
+app.use('/api', historicoRoutes);
+app.use('/api', prestadorRoutes);
+app.use('/api', usuarioRoutes);
 
 // --- Conecta ao MongoDB ---
 mongoose.connect(process.env.MONGO_URI)
